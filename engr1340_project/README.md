@@ -1,2 +1,2 @@
-# engr1340_project
-Team 1
+# Engineering1304_Project2
+Team 6
