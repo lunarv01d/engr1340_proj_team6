@@ -1,57 +1,180 @@
 body {
-        --main-background: #f7f7f7;
-        --primary-color: #004f88;
-        --secondary-color: #008ee0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        line-height: 1.7;
-        color: #333;
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.315);
-    }
+    --main-background: #f7f7f7;
+    --primary-color: #004f88;
+    --secondary-color: #008ee0;
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px;
-        }
+    background: var(--main-background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.315);
+}
 
-        h1 {
-            color: var(--primary-color);
-        }
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 15px;
+}
 
-        h2 {
-            text-align: center;
-            color: var(--primary-color);
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
+h1 {
+    color: var(--primary-color);
+}
 
-        h3 {
-            color: #333;
-            margin-top: 30px;
-        }
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
 
-        ul, ol {
-            padding-left: 25px;
-        }
+h3 {
+    color: #333;
+    margin-top: 30px;
+}
 
-        li {
-            margin-bottom: 12px;
-        }
+ul, ol {
+    padding-left: 25px;
+}
 
-        p {
-            font-size: 1.05em;
-        }
+li {
+    margin-bottom: 12px;
+}
 
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 40px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
+p {
+    font-size: 1.05em;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+
+.login-container {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 24px 20px 28px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.65)
+    );
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 16px 32px rgba(0, 0, 0, 0.18),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.4);
+}
+
+.login-container h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.glass-input {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.4rem;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 999px; /* pill */
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    font-size: 0.95rem;
+    color: #222;
+    outline: none;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        transform 0.1s ease;
+}
+
+.glass-input::placeholder {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.glass-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(0, 142, 224, 0.25);
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+}
+
+
+.glass-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.65rem 1.6rem;
+    margin-top: 0.8rem;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 142, 224, 0.95),
+        rgba(0, 79, 136, 0.95)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
+
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        background 0.12s ease;
+}
+
+.glass-button:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 14px 26px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.45);
+}
+
+.glass-button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.3);
+}

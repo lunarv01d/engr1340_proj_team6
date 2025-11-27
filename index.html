@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Classroom; Log-In</title>
-    <link rel="stylesheet" href="main/css/style.css">
-</head>
 <body>
     <header>
         <h1>Project Classroom</h1>
     </header>
-    <br>
-    <h2>Log-In</h2>
-    <br>
-    <submit-form>
-    <form style="text-align: center;">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password">
-    </form>
-    <div style="align-content: center; align-items: center;">
-        <a href="main/home.html" class="btn-link">
-            <p style="text-align: center;"><button>Log-In</button></p>
-        </a>
-</div>
-    </submit-form>
+
+    <div class="login-container">
+        <h2>Log-In</h2>
+
+        <form class="login-form" action="main/home.html" method="get">
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                class="glass-input"
+                placeholder="Enter your username"
+            >
+
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                class="glass-input"
+                placeholder="Enter your password"
+            >
+
+            <button type="submit" class="glass-button">
+                Log-In
+            </button>
+        </form>
+    </div>
+
+    <footer>
+        <p style="text-align: center;">© 2025 Project Classroom. All rights reserved.</p>
+    </footer>
 </body>
-<footer>
-    <p style="text-align: center;">© 2025 Project Classroom. All rights reserved.</p>
-</footer>
+
 </html>
